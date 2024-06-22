@@ -8,18 +8,12 @@ body {
 
 #slides-container {
   max-width: 800px;
-  height: 50rem;
   margin: 20px auto;
   padding: 20px;
-  background: rgb(128, 128, 201);
+  background: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.slide {
-  margin-bottom: 20px;
-}
-
 
 .floating-button {
   position: fixed;
@@ -73,8 +67,12 @@ form textarea {
   height: 100px;
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 form button {
-  display: inline-block;
   padding: 10px 20px;
   background: #28a745;
   color: white;
@@ -85,4 +83,12 @@ form button {
 
 form button:hover {
   background: #218838;
+}
+
+form button[type="button"] {
+  background: #dc3545;
+}
+
+form button[type="button"]:hover {
+  background: #c82333;
 }
