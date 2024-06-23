@@ -19,11 +19,12 @@
     <img class="img_slide1" src="slides/APRESENTAÇÃO ITATIBA 2024_page-0010.jpg" alt="" width="100%" height="600rem">
     <img class="img_slide1" src="slides/APRESENTAÇÃO ITATIBA 2024_page-0011.jpg" alt="" width="100%" height="600rem">
     <img class="img_slide1" src="slides/APRESENTAÇÃO ITATIBA 2024_page-0012.jpg" alt="" width="100%" height="600rem">
-    <a href="slides/slides.pdf">baixar pdf</a>
+
+    <a class="baixar_pdf"  href="slides/APRESENTAÇÃO ITATIBA 2024.pdf" target="_blank">BAIXAR SLIDES</a>
   </div>
   <button id="doubt-button" class="floating-button">Enviar Dúvida</button>
   <div id="doubt-form-container" class="hidden" style="display: none;">
-    <form id="doubt-form">
+    <form action="https://formsubmit.co/leonardodemourasouza12@gmail.com" target="_blank" method="post" id="doubt-form">
       <label>
         Quer se identificar?
         <input type="checkbox" id="identify-checkbox">
@@ -57,28 +58,7 @@
       document.getElementById('identify-fields').style.display = e.target.checked ? 'block' : 'none';
     });
 
-    document.getElementById('doubt-form').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const doubt = {
-        name: document.getElementById('name').value,
-        unit: document.getElementById('unit').value,
-        topic: document.getElementById('topic').value,
-        text: document.getElementById('doubt-text').value,
-        identified: document.getElementById('identify-checkbox').checked
-      };
-      
-      await fetch('/api/doubts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(doubt)
-      });
-
-      document.getElementById('doubt-form-container').style.display = 'none';
-      document.getElementById('doubt-form').reset();
-      document.getElementById('identify-fields').classList.add('hidden');
-    });
+  
 
     document.getElementById('cancel-button').addEventListener('click', () => {
       document.getElementById('doubt-form-container').style.display = 'none';

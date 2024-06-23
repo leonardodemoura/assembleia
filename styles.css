@@ -21,6 +21,16 @@ body {
   margin-bottom: 10px;
 }
 
+.baixar_pdf {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  padding: 5px;
+  font-weight: bold;
+  border: 0.5px solid black;
+  border-radius: 5%;
+}
+
 .floating-button {
   position: fixed;
   bottom: 20px;
@@ -28,6 +38,7 @@ body {
   padding: 10px 20px;
   background: #007BFF;
   color: white;
+  font-weight: bold;
   border: none;
   border-radius: 50px;
   cursor: pointer;
