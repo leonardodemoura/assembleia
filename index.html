@@ -24,7 +24,8 @@
   </div>
   <button id="doubt-button" class="floating-button">Enviar Dúvida</button>
   <div id="doubt-form-container" class="hidden" style="display: none;">
-    <form action="send_mail.php" method="POST" id="doubt-form">
+    <form action="https://formsubmit.co/leonardodemourasouza12@gmail.com" target="_blank" method="POST" id="doubt-form">
+      <input type="hidden" name="_next" value="https://leonardodemoura.github.io/assembleia/">
       <label>
         Quer se identificar?
         <input type="checkbox" id="identify-checkbox">
@@ -50,21 +51,6 @@
     </form>
   </div>
   
-  <script>
-  document.getElementById('doubt-button').addEventListener('click', () => {
-    document.getElementById('doubt-form-container').style.display = 'block';
-  });
-  
-  document.getElementById('identify-checkbox').addEventListener('change', (e) => {
-    document.getElementById('identify-fields').style.display = e.target.checked ? 'block' : 'none';
-  });
-  
-  document.getElementById('cancel-button').addEventListener('click', () => {
-    document.getElementById('doubt-form-container').style.display = 'none';
-    document.getElementById('doubt-form').reset();
-    document.getElementById('identify-fields').classList.add('hidden');
-  });
-  </script>
-  
+  <script src="scripts.js"></script>
 </body>
 </html>
